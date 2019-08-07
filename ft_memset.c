@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amasmeje <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/05 16:45:59 by amasmeje          #+#    #+#             */
-/*   Updated: 2019/08/05 21:11:22 by amasmeje         ###   ########.fr       */
+/*   Created: 2019/08/05 21:06:26 by amasmeje          #+#    #+#             */
+/*   Updated: 2019/08/05 23:10:11 by amasmeje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	if (c >= 060 && c <= 071)
-		return (1);
-	else
-		return (0);
+	unsigned char	*str;
+	size_t			i;
+
+	i = 0;
+	str = (unsigned char *)b;
+	while (i < len)
+	{
+		str[i] = c;
+		i++;
+	}
+	return (b);
 }
