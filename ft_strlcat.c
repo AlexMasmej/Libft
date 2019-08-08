@@ -18,20 +18,20 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	j;
+	size_t	k;
 
 	i = 0;
 	j = 0;
 	while (dst[i])
 		i++;
-	while (src[j])
+	while (dst[j] && j < dstsize)
+	{
+		dst[i + j] = src[j];
 		j++;
-	return ();
-}
-
-int		main()
-{
-	char dst[20] = "Hello bitches";
-	char src[20] = "what's up suckaz";
-	printf("%lu", strlcat(dst, src, 5));
-	return (0);
+	}
+	dst[i + j] = '\0';
+	k = 0;
+	while (src[k])
+		k++;
+	return (k + dstsize);
 }
