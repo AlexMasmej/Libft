@@ -6,9 +6,11 @@
 /*   By: amasmeje <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 17:00:22 by amasmeje          #+#    #+#             */
-/*   Updated: 2019/08/05 17:02:35 by amasmeje         ###   ########.fr       */
+/*   Updated: 2019/08/10 11:32:53 by amasmeje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
