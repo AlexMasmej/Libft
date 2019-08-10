@@ -6,7 +6,7 @@
 #    By: amasmeje <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/09 22:24:18 by amasmeje          #+#    #+#              #
-#    Updated: 2019/08/10 11:26:27 by amasmeje         ###   ########.fr        #
+#    Updated: 2019/08/10 11:35:27 by amasmeje         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRCS = ft_*.c
 
-OBJ = $(SRCS: .c =.o)
+OBJ = ft_*.o
 
 all: $(NAME)
 
