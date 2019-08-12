@@ -11,32 +11,19 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	k;
-
-	while (*s1 == *s2 && *s1 < n)
+	if (s1 && s2)
 	{
-		if (*s1 == '\0')
-			return (0);
-		s1++;
-		s2++;
+		while (*s1 == *s2 && n != 1)
+		{
+			if (*s1 == '\0')
+				return (0);
+			s1++;
+			s2++;
+			n--;
+		}
 	}
-	k = *(unsigned char *)s1 - *(unsigned char *)s2;
-	if (k < 0)
-		return (-1);
-	else if (k > 0)
-		return (1);
-	else
-		return (0);
-}
-
-int	main()
-{
-	const char a[50] = "Who said I would";
-	const char b[50] = "Who sajd I would";
-	printf("%d\n should be\n%d", ft_strncmp(a, b, 50), strncmp(a, b, 50));
-	return (0);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
