@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amasmeje <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/05 16:42:00 by amasmeje          #+#    #+#             */
-/*   Updated: 2019/08/05 21:09:22 by amasmeje         ###   ########.fr       */
+/*   Created: 2019/08/12 20:38:35 by amasmeje          #+#    #+#             */
+/*   Updated: 2019/08/12 20:38:36 by amasmeje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <ctype.h>
-# include <string.h>
-# include <strings.h>
-# include <stdlib.h>
+void	*ft_bzero(void *s, size_t n)
+{
+	size_t	i;
 
-#endif
+	i = 0;
+	while (i < n)
+	{
+		(char *)s[i] = 0;
+		i++;
+	}
+	return (s);
+}
