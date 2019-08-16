@@ -14,7 +14,8 @@
 
 int		ft_isalnum(int c)
 {
-	if (c >= 060 && c <= 0172)
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') \
+	|| (c >= '0' && c <= '9'))
 		return (1);
 	else
 		return (0);

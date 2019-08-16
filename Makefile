@@ -12,27 +12,20 @@
 
 NAME = libft.a
 
-CC = gcc
-
-RM = rm -f
-
-CFLAGS = -Wall -Wextra -Werror
-
 SRCS = ft_*.c
 
-OBJ = ft_*.o
+OSRCS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) -c $(SRCS) $(CFLAGS)
-	ar rcs $(NAME) $(OBJ)
+	gcc -c $(SRCS) -Wall -Wextra -Werror
+	ar rcs $(NAME) $(OSRCS)
 
 clean:
-	$(RM) $(OBJ)
+	/bin/rm -f $(OSRCS)
 
 fclean: clean
-	$(RM) $(NAME)
+	/bin/rm -f $(NAME)
 
-re:
-	fclean all
+re: fclean all

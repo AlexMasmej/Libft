@@ -21,7 +21,7 @@ char	*ft_strcpy(char *dst, const char *src)
 	j = 0;
 	while (src[i])
 		i++;
-	while (dst[j] && j <= i)
+	while (j < i)
 	{
 		dst[j] = src[j];
 		j++;
