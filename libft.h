@@ -54,5 +54,7 @@ void	ft_putendl(char const *s);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
+char	*ft_itoa(int n);
+int		get_len(int isneg, int n);
 
 #endif
