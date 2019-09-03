@@ -12,22 +12,6 @@
 
 #include "libft.h"
 
-int		get_len(int isneg, int n)
-{
-	int		len;
-
-	len = 0;
-	if (isneg == 1)
-		len = 1;
-	while (n >= 10)
-	{
-		n = n / 10;
-		len++;
-	}
-	len++;
-	return (len);
-}
-
 char	*ft_itoa(int n)
 {
 	int		isneg;
@@ -40,7 +24,7 @@ char	*ft_itoa(int n)
 	isneg = n < 0 ? 1 : 0;
 	if (n < 0)
 		n = n * -1;
-	len = get_len(isneg, n);
+	len = ft_get_number_len(isneg, n);
 	if (!(dest = malloc(len + 1)))
 		return (NULL);
 	len2 = len;
