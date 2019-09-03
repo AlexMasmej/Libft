@@ -65,7 +65,6 @@ void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
 char				*ft_itoa(int n);
-int					get_len(int isneg, int n);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
@@ -88,6 +87,6 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_count_words(const char *s, int c);
 int					ft_get_word_len(const char *s, char c);
-int					ft_get_number_len(int isneg, int n);
+int					ft_get_number_len(int isneg, long n);
 
 #endif

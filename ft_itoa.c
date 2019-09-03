@@ -12,15 +12,15 @@
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+char	*ft_itoa(int nb)
 {
 	int		isneg;
 	int		len;
 	int		len2;
 	char	*dest;
+	long	n;
 
-	if (n == -2147483648)
-		return ("-2147483648");
+	n = nb;
 	isneg = n < 0 ? 1 : 0;
 	if (n < 0)
 		n = n * -1;
