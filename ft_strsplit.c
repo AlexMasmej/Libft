@@ -19,6 +19,8 @@ char	**ft_strsplit(char const *s, char c)
 	int		k;
 	char	**array;
 
+	if (!s)
+		return (NULL);
 	i = -1;
 	j = 0;
 	if (!(array = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1))))

@@ -15,11 +15,16 @@
 void	ft_strclr(char *s)
 {
 	int		i;
+	char	*s1;
 
 	i = 0;
-	while (s[i])
+	s1 = (char *)s;
+	if (s1)
 	{
-		s[i] = '\0';
-		i++;
+		while (s[i])
+		{
+			s[i] = '\0';
+			i++;
+		}
 	}
 }
