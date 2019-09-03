@@ -88,5 +88,6 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_count_words(const char *s, int c);
 int					ft_get_word_len(const char *s, char c);
+int					ft_get_number_len(int isneg, int n);
 
 #endif
