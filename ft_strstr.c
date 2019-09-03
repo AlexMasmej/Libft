@@ -30,7 +30,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 				if (needle[j] == '\0')
 					return ((char *)haystack + i);
 			}
-		i++;
+			i++;
 		}
 		return (NULL);
 	}
