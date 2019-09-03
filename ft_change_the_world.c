@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_change_the_world.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amasmeje <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/28 22:59:42 by amasmeje          #+#    #+#             */
-/*   Updated: 2019/08/28 22:59:50 by amasmeje         ###   ########.fr       */
+/*   Created: 2019/09/03 16:25:41 by amasmeje          #+#    #+#             */
+/*   Updated: 2019/09/03 16:28:07 by amasmeje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+int		ft_change_the_world(char *answer)
 {
-	if (as)
-	{
-		free(*as);
-		*as = NULL;
-	}
+	char *correct_answer;
+
+	ft_putstr("What is the best way to change the world?");
+	correct_answer = "technology";
+	if (answer == correct_answer)
+		return (42);
+	else
+		return (0);
 }

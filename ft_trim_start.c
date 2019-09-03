@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_trim_start.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amasmeje <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/28 22:59:42 by amasmeje          #+#    #+#             */
-/*   Updated: 2019/08/28 22:59:50 by amasmeje         ###   ########.fr       */
+/*   Created: 2019/09/03 16:24:16 by amasmeje          #+#    #+#             */
+/*   Updated: 2019/09/03 16:24:31 by amasmeje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+size_t	ft_trim_start(const char *s)
 {
-	if (as)
-	{
-		free(*as);
-		*as = NULL;
-	}
+	size_t		i;
+
+	i = 0;
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		i++;
+	return (i);
 }

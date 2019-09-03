@@ -23,12 +23,8 @@ char	*ft_strtrim(char const *s)
 		return (NULL);
 	if (ft_strlen(s) == 0)
 		return ((char *)s);
-	i = 0;
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
-		i++;
-	j = ft_strlen(s) - 1;
-	while ((s[j] == ' ' || s[j] == '\t' || s[j] == '\n') && i != ft_strlen(s))
-		j--;
+	i = ft_trim_start(s);
+	j = ft_trim_end(s);
 	if (!(s1 = (char *)malloc(j - i + 2)))
 		return (NULL);
 	k = 0;
