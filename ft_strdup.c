@@ -22,7 +22,7 @@ char	*ft_strdup(const char *s1)
 	len = 0;
 	while (s1[len])
 		len++;
-	if (!(s2 = (char *)malloc(sizeof(len + 1))))
+	if (!(s2 = (char *)malloc(len + 1)))
 		return (NULL);
 	while (i < len)
 	{
